@@ -1,6 +1,8 @@
-import functions_framework
+from flask import Flask
+
+app = Flask(__name__)
 
 
-@functions_framework.http
-def sync_sheets_to_gcs(request):
+@app.route("/")
+def hello():
     return "Hi Dave", 200
